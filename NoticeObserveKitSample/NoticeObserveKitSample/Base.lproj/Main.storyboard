@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="-119.2" y="135.38230884557723"/>
         </scene>
-        <!--View Controller-->
+        <!--Next View Controller-->
         <scene sceneID="Gx1-2o-LdO">
             <objects>
-                <viewController id="vQr-nc-yqg" sceneMemberID="viewController">
+                <viewController id="vQr-nc-yqg" customClass="NextViewController" customModule="NoticeObserveKitSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L6I-JQ-1Et"/>
                         <viewControllerLayoutGuide type="bottom" id="TKm-IW-Htn"/>

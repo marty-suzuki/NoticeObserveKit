@@ -1,8 +1,7 @@
 {
   "name": "NoticeObserveKit",
   "version": "0.1.0",
-  "summary": "A short description of NoticeObserveKit.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "NoticeObserveKit is type-safe NotificationCenter wrapper that associates notice type with info type.",
   "homepage": "https://github.com/marty-suzuki/NoticeObserveKit",
   "license": {
     "type": "MIT",

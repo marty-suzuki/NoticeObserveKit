@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         }.addObserverTo(pool)
         
         NavigationControllerWillShow.observe { [unowned self] in
-            if !($0.viewController is ViewController) {
+            if $0.viewController is NextViewController {
                 $0.viewController.title = "Dummy VC"
             }
             self.setText("UINavigationController will show = \($0)")

@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		04D5EAE078FD279BC2CFF9A53EFF5D32 /* NoticeObserveKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C56732946587B8A40337C6D0FE29B /* NoticeObserveKit.swift */; };
 		11A91BFFA16676E655F4EC6DCCBB2FD4 /* NoticeObserveKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE9F851D19FE245E58D11712545ADA0E /* NoticeObserveKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4756D42E2B5504B917E40FEC955047FA /* Pods-NoticeObserveKitSampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEFFFB43A81F780BADF1A3CF2823D49 /* Pods-NoticeObserveKitSampleTests-dummy.m */; };
-		4FDB897F81937EC57AF5981AD208BB5A /* Pods-NoticeObserveKitSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B907251D7E3B1907BFEC8FC57D730 /* Pods-NoticeObserveKitSample-dummy.m */; };
+		4FDB897F81937EC57AF5981AD208BB5A /* Pods-NoticeObserveKitSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F88FDD1D049CD55B906550FF119787 /* Pods-NoticeObserveKitSample-dummy.m */; };
 		5663B222EB5BB739813BB5D1BBAA48D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
 		6021934F9BFFAC01B3757D9860E217E2 /* NoticeObserveKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E34EBDF923B1EDD4E3021B0B4C41A2CD /* NoticeObserveKit-dummy.m */; };
-		690CED7B0116EAECCD880C3D2260B257 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		8A183581D2C932FFB2CBE19AA977F536 /* Pods-NoticeObserveKitSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F563084C36BA1C3F7BF5DE8A9EC935F5 /* Pods-NoticeObserveKitSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC1D45342E8B28F45B81D733B3057D27 /* Pods-NoticeObserveKitSampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B31E6019F14ACBD65DB9A5F40653344 /* Pods-NoticeObserveKitSampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A183581D2C932FFB2CBE19AA977F536 /* Pods-NoticeObserveKitSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD34E28223BA85383B96851BFB53FD7C /* Pods-NoticeObserveKitSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6914A1ED3CA0D886D7C749831C95C46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
 		C8382D4E97BF943BCE08BEF10E32E1F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
 /* End PBXBuildFile section */
@@ -31,50 +28,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0733D65A8F6B6E1994F56E486B2B4667 /* Pods-NoticeObserveKitSampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NoticeObserveKitSampleTests.modulemap"; sourceTree = "<group>"; };
-		0E39C9F2D96EB493F64B65BDB227945F /* Pods-NoticeObserveKitSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoticeObserveKitSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0152199013BEDCB8A7E75171A70B2BC7 /* Pods-NoticeObserveKitSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NoticeObserveKitSample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0E5C56732946587B8A40337C6D0FE29B /* NoticeObserveKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NoticeObserveKit.swift; sourceTree = "<group>"; };
-		0F00870B28ED9B6D3AA22218DC229AD6 /* Pods-NoticeObserveKitSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NoticeObserveKitSample.modulemap"; sourceTree = "<group>"; };
-		150126295D37EF3A00B58EDD3747AA5D /* Pods-NoticeObserveKitSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoticeObserveKitSample.release.xcconfig"; sourceTree = "<group>"; };
-		1B31E6019F14ACBD65DB9A5F40653344 /* Pods-NoticeObserveKitSampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NoticeObserveKitSampleTests-umbrella.h"; sourceTree = "<group>"; };
+		10E642F5E730B242D66CA844494D25C7 /* Pods-NoticeObserveKitSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoticeObserveKitSample-frameworks.sh"; sourceTree = "<group>"; };
 		1FE8A982431FFE8DBD2737C59DAA5540 /* NoticeObserveKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NoticeObserveKit.modulemap; sourceTree = "<group>"; };
-		2AAB3647B557A16B6AAA718A15D46A87 /* Pods-NoticeObserveKitSampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoticeObserveKitSampleTests-resources.sh"; sourceTree = "<group>"; };
-		38659E8414F88054EA094DBB9B604A43 /* Pods-NoticeObserveKitSampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoticeObserveKitSampleTests-frameworks.sh"; sourceTree = "<group>"; };
-		3F9743E2CEAD7C5AD77480F82440C119 /* Pods-NoticeObserveKitSampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NoticeObserveKitSampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5184110C9CC99CAD2D3D4178E330408F /* Pods-NoticeObserveKitSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoticeObserveKitSample.debug.xcconfig"; sourceTree = "<group>"; };
+		25EDD91EB7A3DF772C29BCD812765B4A /* Pods-NoticeObserveKitSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoticeObserveKitSample.debug.xcconfig"; sourceTree = "<group>"; };
 		56ED1608F99E8A1FB2029775A3535050 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6BEFFFB43A81F780BADF1A3CF2823D49 /* Pods-NoticeObserveKitSampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NoticeObserveKitSampleTests-dummy.m"; sourceTree = "<group>"; };
-		6CBE4F1BF7702EA6E74B5ECB53B98C22 /* Pods-NoticeObserveKitSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoticeObserveKitSample-resources.sh"; sourceTree = "<group>"; };
+		667337A383A19049994DB6784D9DC696 /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NoticeObserveKit.framework; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		682FBFC4DCBCAABFC7B0D5E24ED08387 /* Pods-NoticeObserveKitSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoticeObserveKitSample.release.xcconfig"; sourceTree = "<group>"; };
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		8104AC607DB86EF46FE1DB302A5A480E /* Pods-NoticeObserveKitSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NoticeObserveKitSample-acknowledgements.plist"; sourceTree = "<group>"; };
-		82523C1AEE289A4FBBADA94A04FFB3D6 /* Pods-NoticeObserveKitSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NoticeObserveKitSample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8A9239B8A148CD997A1264B6FCB8D7DC /* NoticeObserveKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NoticeObserveKit-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4AA35BA39D6DA6E22EEC596CED1142F /* Pods-NoticeObserveKitSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoticeObserveKitSampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		B097CB41BDA14E4549478E4170E8C129 /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NoticeObserveKit.framework; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4874CFAB61BE2F28E4E36721E39A38A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C618083C61ED5E9CBD735FA0BE18C3F6 /* Pods-NoticeObserveKitSampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NoticeObserveKitSampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DA8B907251D7E3B1907BFEC8FC57D730 /* Pods-NoticeObserveKitSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NoticeObserveKitSample-dummy.m"; sourceTree = "<group>"; };
+		98F88FDD1D049CD55B906550FF119787 /* Pods-NoticeObserveKitSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NoticeObserveKitSample-dummy.m"; sourceTree = "<group>"; };
+		A4C7322EDF51898491044E8692428B2B /* Pods_NoticeObserveKitSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NoticeObserveKitSample.framework; path = "Pods-NoticeObserveKitSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C8C0132E9FEECFCC561A5229ACC099 /* Pods-NoticeObserveKitSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NoticeObserveKitSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		AD34E28223BA85383B96851BFB53FD7C /* Pods-NoticeObserveKitSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NoticeObserveKitSample-umbrella.h"; sourceTree = "<group>"; };
+		CB9D9C67494C650F4F88F629FE6DC9D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE9F851D19FE245E58D11712545ADA0E /* NoticeObserveKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NoticeObserveKit-umbrella.h"; sourceTree = "<group>"; };
 		E29CC0D4B6DD581893EACDC3BD8F97E8 /* NoticeObserveKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NoticeObserveKit.xcconfig; sourceTree = "<group>"; };
 		E34EBDF923B1EDD4E3021B0B4C41A2CD /* NoticeObserveKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NoticeObserveKit-dummy.m"; sourceTree = "<group>"; };
-		E74BA86FDD79BE4B03D684F1BEFE56F0 /* Pods_NoticeObserveKitSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NoticeObserveKitSampleTests.framework; path = "Pods-NoticeObserveKitSampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E77BAAA18E37DB54B2D5EB72B8B2A45B /* Pods_NoticeObserveKitSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NoticeObserveKitSample.framework; path = "Pods-NoticeObserveKitSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAA898D24C13A2A9601CF748CE381324 /* Pods-NoticeObserveKitSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoticeObserveKitSample-frameworks.sh"; sourceTree = "<group>"; };
-		EBDC327557F6F04F054EDA8301B73678 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F563084C36BA1C3F7BF5DE8A9EC935F5 /* Pods-NoticeObserveKitSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NoticeObserveKitSample-umbrella.h"; sourceTree = "<group>"; };
+		F8624FEB22CBA6509A1B70DD5BD89309 /* Pods-NoticeObserveKitSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoticeObserveKitSample-resources.sh"; sourceTree = "<group>"; };
+		F9520CC16E37D26E808E5150CA9BCC0D /* Pods-NoticeObserveKitSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NoticeObserveKitSample.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5EFB34555B0C0C1C4F28740F17A1D773 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				690CED7B0116EAECCD880C3D2260B257 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A718FAAC85EBFB4873AC79C5CBE03E08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,6 +91,14 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		2BD069A73A32581FDB35113BBDECCB62 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F16C2AAC8E5EDE4112F259D8B6401D6 /* Pods-NoticeObserveKitSample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		2CA9DFC238312E5B65CD966A46264FF3 /* NoticeObserveKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,24 +122,6 @@
 			path = "NoticeObserveKitSample/Pods/Target Support Files/NoticeObserveKit";
 			sourceTree = "<group>";
 		};
-		3AEF5AB61F788C210B04F17AABCB8967 /* Pods-NoticeObserveKitSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				B4874CFAB61BE2F28E4E36721E39A38A /* Info.plist */,
-				0733D65A8F6B6E1994F56E486B2B4667 /* Pods-NoticeObserveKitSampleTests.modulemap */,
-				C618083C61ED5E9CBD735FA0BE18C3F6 /* Pods-NoticeObserveKitSampleTests-acknowledgements.markdown */,
-				3F9743E2CEAD7C5AD77480F82440C119 /* Pods-NoticeObserveKitSampleTests-acknowledgements.plist */,
-				6BEFFFB43A81F780BADF1A3CF2823D49 /* Pods-NoticeObserveKitSampleTests-dummy.m */,
-				38659E8414F88054EA094DBB9B604A43 /* Pods-NoticeObserveKitSampleTests-frameworks.sh */,
-				2AAB3647B557A16B6AAA718A15D46A87 /* Pods-NoticeObserveKitSampleTests-resources.sh */,
-				1B31E6019F14ACBD65DB9A5F40653344 /* Pods-NoticeObserveKitSampleTests-umbrella.h */,
-				0E39C9F2D96EB493F64B65BDB227945F /* Pods-NoticeObserveKitSampleTests.debug.xcconfig */,
-				A4AA35BA39D6DA6E22EEC596CED1142F /* Pods-NoticeObserveKitSampleTests.release.xcconfig */,
-			);
-			name = "Pods-NoticeObserveKitSampleTests";
-			path = "Target Support Files/Pods-NoticeObserveKitSampleTests";
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,52 +130,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A3571FBE5738BE42DF16AEE40B9E8FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				667337A383A19049994DB6784D9DC696 /* NoticeObserveKit.framework */,
+				A4C7322EDF51898491044E8692428B2B /* Pods_NoticeObserveKitSample.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				1414F1352935A93970B1ECC372E8F329 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				DD25CC30E1DC2691D2FA1E72BE87DBCA /* Products */,
-				A1F86AE66B8247E5FEB86355E5374174 /* Targets Support Files */,
+				5A3571FBE5738BE42DF16AEE40B9E8FD /* Products */,
+				2BD069A73A32581FDB35113BBDECCB62 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A1B9DC2745A668CD67EBD44FC768C78B /* Pods-NoticeObserveKitSample */ = {
+		9F16C2AAC8E5EDE4112F259D8B6401D6 /* Pods-NoticeObserveKitSample */ = {
 			isa = PBXGroup;
 			children = (
-				EBDC327557F6F04F054EDA8301B73678 /* Info.plist */,
-				0F00870B28ED9B6D3AA22218DC229AD6 /* Pods-NoticeObserveKitSample.modulemap */,
-				82523C1AEE289A4FBBADA94A04FFB3D6 /* Pods-NoticeObserveKitSample-acknowledgements.markdown */,
-				8104AC607DB86EF46FE1DB302A5A480E /* Pods-NoticeObserveKitSample-acknowledgements.plist */,
-				DA8B907251D7E3B1907BFEC8FC57D730 /* Pods-NoticeObserveKitSample-dummy.m */,
-				EAA898D24C13A2A9601CF748CE381324 /* Pods-NoticeObserveKitSample-frameworks.sh */,
-				6CBE4F1BF7702EA6E74B5ECB53B98C22 /* Pods-NoticeObserveKitSample-resources.sh */,
-				F563084C36BA1C3F7BF5DE8A9EC935F5 /* Pods-NoticeObserveKitSample-umbrella.h */,
-				5184110C9CC99CAD2D3D4178E330408F /* Pods-NoticeObserveKitSample.debug.xcconfig */,
-				150126295D37EF3A00B58EDD3747AA5D /* Pods-NoticeObserveKitSample.release.xcconfig */,
+				CB9D9C67494C650F4F88F629FE6DC9D3 /* Info.plist */,
+				F9520CC16E37D26E808E5150CA9BCC0D /* Pods-NoticeObserveKitSample.modulemap */,
+				0152199013BEDCB8A7E75171A70B2BC7 /* Pods-NoticeObserveKitSample-acknowledgements.markdown */,
+				A6C8C0132E9FEECFCC561A5229ACC099 /* Pods-NoticeObserveKitSample-acknowledgements.plist */,
+				98F88FDD1D049CD55B906550FF119787 /* Pods-NoticeObserveKitSample-dummy.m */,
+				10E642F5E730B242D66CA844494D25C7 /* Pods-NoticeObserveKitSample-frameworks.sh */,
+				F8624FEB22CBA6509A1B70DD5BD89309 /* Pods-NoticeObserveKitSample-resources.sh */,
+				AD34E28223BA85383B96851BFB53FD7C /* Pods-NoticeObserveKitSample-umbrella.h */,
+				25EDD91EB7A3DF772C29BCD812765B4A /* Pods-NoticeObserveKitSample.debug.xcconfig */,
+				682FBFC4DCBCAABFC7B0D5E24ED08387 /* Pods-NoticeObserveKitSample.release.xcconfig */,
 			);
 			name = "Pods-NoticeObserveKitSample";
 			path = "Target Support Files/Pods-NoticeObserveKitSample";
-			sourceTree = "<group>";
-		};
-		A1F86AE66B8247E5FEB86355E5374174 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A1B9DC2745A668CD67EBD44FC768C78B /* Pods-NoticeObserveKitSample */,
-				3AEF5AB61F788C210B04F17AABCB8967 /* Pods-NoticeObserveKitSampleTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DD25CC30E1DC2691D2FA1E72BE87DBCA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B097CB41BDA14E4549478E4170E8C129 /* NoticeObserveKit.framework */,
-				E77BAAA18E37DB54B2D5EB72B8B2A45B /* Pods_NoticeObserveKitSample.framework */,
-				E74BA86FDD79BE4B03D684F1BEFE56F0 /* Pods_NoticeObserveKitSampleTests.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
@@ -222,14 +180,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		050BD90EC3A2ACF751CFF599204C0B33 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC1D45342E8B28F45B81D733B3057D27 /* Pods-NoticeObserveKitSampleTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		082ACF43352CC9AC19FA614EE9388F2D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,7 +214,7 @@
 			);
 			name = "Pods-NoticeObserveKitSample";
 			productName = "Pods-NoticeObserveKitSample";
-			productReference = E77BAAA18E37DB54B2D5EB72B8B2A45B /* Pods_NoticeObserveKitSample.framework */;
+			productReference = A4C7322EDF51898491044E8692428B2B /* Pods_NoticeObserveKitSample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B849E31D7029F3CEBDE79DBE6759B0D5 /* NoticeObserveKit */ = {
@@ -281,24 +231,7 @@
 			);
 			name = NoticeObserveKit;
 			productName = NoticeObserveKit;
-			productReference = B097CB41BDA14E4549478E4170E8C129 /* NoticeObserveKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CD45AD981A63C4C473C0F4AA7D11517C /* Pods-NoticeObserveKitSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2ED2C5EA23CF3D981C4ABDE7EBD7671D /* Build configuration list for PBXNativeTarget "Pods-NoticeObserveKitSampleTests" */;
-			buildPhases = (
-				5A2EB25F1ED19A8F300B9545F6951E40 /* Sources */,
-				5EFB34555B0C0C1C4F28740F17A1D773 /* Frameworks */,
-				050BD90EC3A2ACF751CFF599204C0B33 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-NoticeObserveKitSampleTests";
-			productName = "Pods-NoticeObserveKitSampleTests";
-			productReference = E74BA86FDD79BE4B03D684F1BEFE56F0 /* Pods_NoticeObserveKitSampleTests.framework */;
+			productReference = 667337A383A19049994DB6784D9DC696 /* NoticeObserveKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -318,26 +251,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DD25CC30E1DC2691D2FA1E72BE87DBCA /* Products */;
+			productRefGroup = 5A3571FBE5738BE42DF16AEE40B9E8FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B849E31D7029F3CEBDE79DBE6759B0D5 /* NoticeObserveKit */,
 				2E787C9E062AC013E553B233251DA665 /* Pods-NoticeObserveKitSample */,
-				CD45AD981A63C4C473C0F4AA7D11517C /* Pods-NoticeObserveKitSampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5A2EB25F1ED19A8F300B9545F6951E40 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4756D42E2B5504B917E40FEC955047FA /* Pods-NoticeObserveKitSampleTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74DC94F1D0734CA5AC68A89DFD697CFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,41 +291,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		19AFD6F4081E538EA3C6EB06869C1356 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4AA35BA39D6DA6E22EEC596CED1142F /* Pods-NoticeObserveKitSampleTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-NoticeObserveKitSampleTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NoticeObserveKitSampleTests/Pods-NoticeObserveKitSampleTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NoticeObserveKitSampleTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		328F539B94F7889F384202ED258C9223 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E29CC0D4B6DD581893EACDC3BD8F97E8 /* NoticeObserveKit.xcconfig */;
@@ -469,7 +358,7 @@
 		};
 		474A641F9C451BAA6DA047C51E2BAE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5184110C9CC99CAD2D3D4178E330408F /* Pods-NoticeObserveKitSample.debug.xcconfig */;
+			baseConfigurationReference = 25EDD91EB7A3DF772C29BCD812765B4A /* Pods-NoticeObserveKitSample.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -545,7 +434,7 @@
 		};
 		8D06183F90EA60677B4D8C109C79886A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 150126295D37EF3A00B58EDD3747AA5D /* Pods-NoticeObserveKitSample.release.xcconfig */;
+			baseConfigurationReference = 682FBFC4DCBCAABFC7B0D5E24ED08387 /* Pods-NoticeObserveKitSample.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -577,41 +466,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		D3D89AAA34F83ED7851B389DE64D90B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E39C9F2D96EB493F64B65BDB227945F /* Pods-NoticeObserveKitSampleTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-NoticeObserveKitSampleTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NoticeObserveKitSampleTests/Pods-NoticeObserveKitSampleTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NoticeObserveKitSampleTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -674,15 +528,6 @@
 			buildConfigurations = (
 				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
 				673254EEAF0B5BF4596080C749645884 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2ED2C5EA23CF3D981C4ABDE7EBD7671D /* Build configuration list for PBXNativeTarget "Pods-NoticeObserveKitSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3D89AAA34F83ED7851B389DE64D90B2 /* Debug */,
-				19AFD6F4081E538EA3C6EB06869C1356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
