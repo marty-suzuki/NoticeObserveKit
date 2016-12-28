@@ -101,6 +101,36 @@ let observer = UIKeyboardWillShow.observe { keyboardInfo in
 observer.dispose()
 ```
 
+## Sample
+
+```swift
+import UIKit
+import NoticeObserveKit
+
+class ViewController: UIViewController {
+    private let searchBar = UISearchBar(frame: .zero)
+    private var pool = NoticeObserverPool()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        navigationItem.titleView = searchBar
+
+        configureObservers()
+    }
+
+    private func configureObservers() {
+        UIKeyboardWillShow.observe { [unowned self] in
+            print("UIKeyboard will show = \($0)")
+        }.addObserverTo(pool)
+
+        UIKeyboardWillHide.observe { [unowned self] in
+            print("UIKeyboard will hide = \($0)")
+        }.addObserverTo(pool)
+    }
+}
+```
+
 ## Requirements
 
 - Swift 3.0
