@@ -1,0 +1,6 @@
+framework module NoticeObserveKit {
+  umbrella header "NoticeObserveKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

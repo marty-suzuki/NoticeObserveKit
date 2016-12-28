@@ -1,0 +1,16 @@
+PODS:
+  - NoticeObserveKit (0.1.0)
+
+DEPENDENCIES:
+  - NoticeObserveKit (from `../`)
+
+EXTERNAL SOURCES:
+  NoticeObserveKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NoticeObserveKit: be9cf90ced5228870a73d7afe5b4764cd262fbcb
+
+PODFILE CHECKSUM: 9be2912455788ab835ee4437c7d37f475d1519fa
+
+COCOAPODS: 1.1.1
