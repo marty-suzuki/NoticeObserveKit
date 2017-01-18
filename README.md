@@ -2,6 +2,7 @@
 
 [![Version](https://img.shields.io/cocoapods/v/NoticeObserveKit.svg?style=flat)](http://cocoapods.org/pods/NoticeObserveKit)
 [![License](https://img.shields.io/cocoapods/l/NoticeObserveKit.svg?style=flat)](http://cocoapods.org/pods/NoticeObserveKit)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/NoticeObserveKit.svg?style=flat)](http://cocoapods.org/pods/NoticeObserveKit)
 
 NoticeObserveKit is type-safe NotificationCenter wrapper that associates notice type with info type.
@@ -139,12 +140,25 @@ class ViewController: UIViewController {
 
 ## Installation
 
+#### CocoaPods
+
 NoticeObserveKit is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "NoticeObserveKit"
 ```
+
+#### Carthage
+
+If you’re using [Carthage](https://github.com/Carthage/Carthage), simply add
+MisterFusion to your `Cartfile`:
+
+```
+github "marty-suzuki/NoticeObserveKit"
+```
+
+Make sure to add `NoticeObserveKit.framework` to "Linked Frameworks and Libraries" and "copy-frameworks" Build Phases.
 
 ## Author
 
