@@ -51,10 +51,6 @@ struct UIKeyboardInfo: NoticeUserInfoDecodable {
         self.animationDuration = duration
         self.animationCurve = UIViewAnimationOptions(rawValue: curve)
     }
-
-    func dictionaryRepresentation() -> [AnyHashable : Any] {
-        return [:]
-    }
 }
 ```
 
@@ -152,7 +148,7 @@ pod "NoticeObserveKit"
 #### Carthage
 
 If you’re using [Carthage](https://github.com/Carthage/Carthage), simply add
-MisterFusion to your `Cartfile`:
+NoticeObserveKit to your `Cartfile`:
 
 ```
 github "marty-suzuki/NoticeObserveKit"

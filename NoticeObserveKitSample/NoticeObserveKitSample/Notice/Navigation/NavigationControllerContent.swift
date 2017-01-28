@@ -12,23 +12,3 @@ struct NavigationControllerContent {
     let viewController: UIViewController
     let animated: Bool
 }
-
-extension NavigationControllerContent: NoticeUserInfoDecodable {
-    init?(info: [AnyHashable : Any]) {
-        guard
-            let viewController = info["viewController"] as? UIViewController,
-            let animated = info["animated"] as? Bool
-            else {
-                return nil
-        }
-        self.viewController = viewController
-        self.animated = animated
-    }
-    
-    func dictionaryRepresentation() -> [AnyHashable : Any] {
-        return [
-            "viewController" : viewController,
-            "animated" : animated
-        ]
-    }
-}

@@ -13,10 +13,6 @@ struct UIKeyboardInfo: NoticeUserInfoDecodable {
     let animationDuration: TimeInterval
     let animationCurve: UIViewAnimationOptions
     
-    func dictionaryRepresentation() -> [AnyHashable : Any] {
-        return [:]
-    }
-    
     init?(info: [AnyHashable : Any]) {
         guard
             let frame = (info[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,

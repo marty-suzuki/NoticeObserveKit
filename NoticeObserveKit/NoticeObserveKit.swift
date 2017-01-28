@@ -50,25 +50,22 @@ public extension NoticeType {
 
 public extension NoticeType where InfoType: NoticeUserInfoDecodable {
     static func post(from object: Any? = nil, info: InfoType? = nil) {
-        guard let dictionary = info?.dictionaryRepresentation() else {
-            return
-        }
-        let userInfo: [AnyHashable : Any] = [infoKey : dictionary]
+        guard let info = info else { return }
+        let userInfo: [AnyHashable : Any] = [infoKey : info]
         NotificationCenter.default.post(name: name, object: object, userInfo: userInfo)
     }
     
     static func decode(_ userInfo: [AnyHashable : Any]) -> InfoType? {
-        guard let info = userInfo[infoKey] as? [AnyHashable : Any] else {
+        guard let info = userInfo[infoKey] as? InfoType else {
             return InfoType(info: userInfo)
         }
-        return InfoType(info: info)
+        return info
     }
 }
 
 //MARK: - NoticeUserInfoDecodable
 public protocol NoticeUserInfoDecodable {
     init?(info: [AnyHashable : Any])
-    func dictionaryRepresentation() -> [AnyHashable : Any]
 }
 
 //MARK: - NoticeObserver
