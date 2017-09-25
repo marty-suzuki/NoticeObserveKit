@@ -76,7 +76,12 @@ public struct NoticeObserver {
         self.observer = observer
     }
     
+    @available(*, deprecated: 0.11.0)
     public func addObserverTo(_ pool: NoticeObserverPool) {
+        pool.adding(observer)
+    }
+    
+    public func disposed(by pool: NoticeObserverPool) {
         pool.adding(observer)
     }
     
