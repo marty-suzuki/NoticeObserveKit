@@ -43,7 +43,7 @@ class ViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }, completion: nil)
             self.setText("UIKeyboard will show = \($0)")
-        }.addObserverTo(pool)
+        }.disposed(by: pool)
         
         UIKeyboardWillHide.observe { [unowned self] in
             self.view.layoutIfNeeded()
@@ -52,18 +52,18 @@ class ViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }, completion: nil)
             self.setText("UIKeyboard will hide = \($0)")
-        }.addObserverTo(pool)
+        }.disposed(by: pool)
         
         NavigationControllerDidShow.observe { [unowned self] in
             self.setText("UINavigationController did show = \($0)")
-        }.addObserverTo(pool)
+        }.disposed(by: pool)
         
         NavigationControllerWillShow.observe { [unowned self] in
             if $0.viewController is NextViewController {
                 $0.viewController.title = "Dummy VC"
             }
             self.setText("UINavigationController will show = \($0)")
-        }.addObserverTo(pool)
+        }.disposed(by: pool)
     }
 
     @objc private func didTapCancelButton(_ sender: UIBarButtonItem) {

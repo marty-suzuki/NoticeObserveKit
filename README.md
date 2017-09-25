@@ -16,7 +16,7 @@ UIKeyboardWillShow.observe { keyboardInfo in
 }
 //pool is NoticeObserverPool.
 //If pool is released, NoticeObserves are automatically removed.
-.addObserverTo(pool)
+.disposed(by: pool)
 ```
 
 ## Usage
@@ -130,8 +130,8 @@ class ViewController: UIViewController {
 
 ## Requirements
 
-- Swift 3.0
-- Xcode 8.1 or greater
+- Swift 4
+- Xcode 9 or greater
 - iOS 8.0 or greater
 
 ## Installation
