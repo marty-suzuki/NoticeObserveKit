@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NoticeObserveKit'
-  s.version          = '0.4.0'
+  s.version          = '0.10.0'
   s.summary          = 'NoticeObserveKit is type-safe NotificationCenter wrapper that associates notice type with info type.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/marty-suzuki/NoticeObserveKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/marty_suzuki'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'NoticeObserveKit/*.{swift}'
 

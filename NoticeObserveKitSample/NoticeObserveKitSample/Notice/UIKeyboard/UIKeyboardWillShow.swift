@@ -10,5 +10,5 @@ import NoticeObserveKit
 
 struct UIKeyboardWillShow: NoticeType {
     typealias InfoType = UIKeyboardInfo
-    static let name: Notification.Name = .UIKeyboardWillShow
+    static let name: Notification.Name = UIResponder.keyboardWillShowNotification
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 //MARK: - NoticeType
+@available(iOS, deprecated: 10)
 public protocol NoticeType {
     associatedtype InfoType
     static var name: Notification.Name { get }
@@ -69,6 +70,7 @@ public protocol NoticeUserInfoDecodable {
 }
 
 //MARK: - NoticeObserver
+@available(iOS, deprecated: 10)
 public struct NoticeObserver {
     private let observer: NSObjectProtocol
     
@@ -91,6 +93,7 @@ public struct NoticeObserver {
 }
 
 //MARK: - NoticeObserverPool
+@available(iOS, deprecated: 10)
 public class NoticeObserverPool {
     private var observers: [NSObjectProtocol] = []
     private var mutex: pthread_mutex_t = pthread_mutex_t()
