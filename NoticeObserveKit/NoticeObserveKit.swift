@@ -72,3 +72,10 @@ public extension NoticeType where InfoType: NoticeUserInfoDecodable {
 public protocol NoticeUserInfoDecodable {
     init?(info: [AnyHashable : Any])
 }
+
+extension NoticeObserver {
+    @available(iOS, deprecated: 10, renamed: "invalidated(by:)")
+    public func disposed(by pool: NoticeObserverPool) {
+        invalidated(by: pool)
+    }
+}
