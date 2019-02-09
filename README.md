@@ -5,18 +5,18 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/NoticeObserveKit.svg?style=flat)](http://cocoapods.org/pods/NoticeObserveKit)
 
-NoticeObserveKit is type-safe NotificationCenter wrapper that associates notice type with info type.
+NoticeObserveKit is type-safe NotificationCenter wrapper.
 
 ```swift
-//UIKeyboardWillShow conforms to NoticeType protocol.
-UIKeyboardWillShow.observe { keyboardInfo in
-    //In this case, keyboardInfo is UIKeyboardInfo type.
-    //It is inferred from UIKeyboardWillShow's InfoType.
+// .keyboardWillShow is a static property.
+Notice.Center.default.observe(name: .keyboardWillShow) { keyboardInfo in
+    // In this case, keyboardInfo is UIKeyboardInfo type.
+    // It is inferred from a generic parameter of Notice.Name<Value>.
     print(keyboardInfo)
 }
-//pool is NoticeObserverPool.
-//If pool is released, NoticeObserves are automatically removed.
-.disposed(by: pool)
+// pool is Notice.ObserverPool.
+// If pool is released, Notice.Observes are automatically removed.
+.invalidated(by: pool)
 ```
 
 ## Usage
@@ -25,9 +25,8 @@ First of all, you need to implement `InfoType` and `name` with `NoticeType` prot
 `InfoType` means value type of element in `userInfo` of `Notification`.
 
 ```swift
-struct UIKeyboardWillShow: NoticeType {
-    typealias InfoType = UIKeyboardInfo
-    static let name: Notification.Name = .UIKeyboardWillShow
+extension Notice.Names {
+    static let keyboardWillShow = Notice.Name<UIKeyboardInfo>(UIResponder.keyboardWillShowNotification)
 }
 ```
 
@@ -54,48 +53,37 @@ struct UIKeyboardInfo: NoticeUserInfoDecodable {
 }
 ```
 
+Usage for under v0.4.0 is [documents/v0_4_0](./documents/v0_4_0.md).
+
 ## Customization
-
-If you want to receive `Notification`, you can use receiving parameter.
-
-```swift
-UIKeyboardWillShow.observe(recieving: { notification in
-    print(notification)
-}) { keyboardInfo in
-    print(keyboardInfo)
-}.addObserverTo(pool)
-```
-
-If you want to get specific value from `userInfo` of `Notification`, please implement `infoKey`.
-
-```swift
-struct UIKeyboardWillShow: NoticeType {
-    typealias InfoType = NSValue
-    static let infoKey: String = UIKeyboardFrameEndUserInfoKey
-    static let name: Notification.Name = .UIKeyboardWillShow
-}
-```
 
 If you can post custom Notification like this.
 
 ```swift
-struct NavigationControllerDidShow: NoticeType {
-    typealias InfoType = NavigationControllerContent
-    static var name = Notification.Name("navigationControllerDidShow")
+extension Notice.Names {
+    static let navigationControllerDidShow = Notice.Name<NavigationControllerContent>(name: "navigationControllerDidShow")
 }
 
 let content = NavigationControllerContent(viewController: viewController, animated: animated)
-NavigationControllerWillShow.post(info: content)
+Notice.Center.default.post(name: .navigationControllerDidShow, value: content)
 ```
 
-You can dispose manually like this.
+You can invalidate manually like this.
 
 ```swift
-let observer = UIKeyboardWillShow.observe { keyboardInfo in
+let observer = Notice.Center.default.observe(name: .keyboardWillShow) { keyboardInfo in
     print(keyboardInfo)
 }
+observer.invalidate()
+```
 
-observer.dispose()
+You can use vi NotificationCenter.
+
+```swift
+NotificationCenter.default.nok.observe(name: .keyboardWillShow) { keyboardInfo in
+    print(keyboardInfo)
+}
+.invalidated(by: pool)
 ```
 
 ## Sample
@@ -106,7 +94,7 @@ import NoticeObserveKit
 
 class ViewController: UIViewController {
     private let searchBar = UISearchBar(frame: .zero)
-    private var pool = NoticeObserverPool()
+    private var pool = Notice.ObserverPool()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,22 +105,22 @@ class ViewController: UIViewController {
     }
 
     private func configureObservers() {
-        UIKeyboardWillShow.observe { [unowned self] in
+        Notice.Center.default.observe(name: .keyboardWillShow) {
             print("UIKeyboard will show = \($0)")
-        }.addObserverTo(pool)
+        }.invalidated(by: pool)
 
-        UIKeyboardWillHide.observe { [unowned self] in
+        Notice.Center.default.observe(name: .keyboardWillHide) {
             print("UIKeyboard will hide = \($0)")
-        }.addObserverTo(pool)
+        }.invalidated(by: pool)
     }
 }
 ```
 
 ## Requirements
 
-- Swift 4
-- Xcode 9 or greater
-- iOS 8.0 or greater
+- Swift 4.2
+- Xcode 10.1 or greater
+- iOS 10.0 or greater
 
 ## Installation
 

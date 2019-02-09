@@ -77,40 +77,6 @@ public enum Notice {
     }
 }
 
-// MARK: - Notice.Center (Codable)
-
-extension Notice.Center {
-    public func post<Value: Codable>(name: Notice.Name<Value>, with value: Value, from object: Any? = nil) {
-        do {
-            let data = try JSONEncoder().encode(value)
-            let userInfo = (try JSONSerialization.jsonObject(with: data, options: [])) as? [AnyHashable: Any]
-            center.post(name: name.raw, object: object, userInfo: userInfo)
-        } catch {
-            assertionFailure(error.localizedDescription)
-        }
-    }
-
-    public func observe<Value: Codable>(name: Notice.Name<Value>,
-                                        object: Any? = nil,
-                                        queue: OperationQueue? = nil,
-                                        using: @escaping (Value) -> Void) -> Notice.Observer {
-        let observer = center.addObserver(forName: name.raw, object: object, queue: queue) { notification in
-            guard let userInfo = notification.userInfo else {
-                return
-            }
-
-            do {
-                let data = try JSONSerialization.data(withJSONObject: userInfo, options: [])
-                let value = try JSONDecoder().decode(Value.self, from: data)
-                using(value)
-            } catch {
-                assertionFailure(error.localizedDescription)
-            }
-        }
-        return Notice.Observer(center: center, raw: observer)
-    }
-}
-
 // MARK: - Notice.Center (NoticeUserInfoDecodable)
 
 extension Notice.Center {
@@ -170,5 +136,47 @@ extension Notice.Observer {
 
     public func invalidated(by pool: Notice.ObserverPool) {
         pool.adding(self)
+    }
+}
+
+// MARK: - NotificationCenter extension
+
+extension Notice {
+    public struct Extension {
+        let base: Notice.Center
+    }
+}
+
+extension NotificationCenter {
+    public var nok: Notice.Extension {
+        return Notice.Extension(base: Notice.Center(center: self))
+    }
+}
+
+extension Notice.Extension {
+    public func post<Value>(name: Notice.Name<Value>, with value: Value, from object: Any? = nil) {
+        base.post(name: name, with: value, from: object)
+    }
+    
+    public func observe<Value>(name: Notice.Name<Value>,
+                               object: Any? = nil,
+                               queue: OperationQueue? = nil,
+                               using: @escaping (Value) -> Void) -> Notice.Observer {
+        return base.observe(name: name,
+                            object: object,
+                            queue: queue, using: using)
+    }
+    
+    @available(iOS, unavailable)
+    public func post<Value: NoticeUserInfoDecodable>(name: Notice.Name<Value>, with value: Value, from object: Any? = nil) {}
+    
+    public func observe<Value: NoticeUserInfoDecodable>(name: Notice.Name<Value>,
+                                                        object: Any? = nil,
+                                                        queue: OperationQueue? = nil,
+                                                        using: @escaping (Value) -> Void) -> Notice.Observer {
+        return base.observe(name: name,
+                            object: object,
+                            queue: queue,
+                            using: using)
     }
 }

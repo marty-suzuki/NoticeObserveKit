@@ -6,7 +6,10 @@
 //
 //
 
-import UIKit
+import Foundation
+
+public typealias NoticeObserver = Notice.Observer
+public typealias NoticeObserverPool = Notice.ObserverPool
 
 //MARK: - NoticeType
 @available(iOS, deprecated: 10)
@@ -25,7 +28,8 @@ public extension NoticeType {
     }
     
     static func observe(queue: OperationQueue? = .main, object: Any? = nil, recieving notiBlock: ((Notification) -> ())? = nil, using infoBlock: @escaping (InfoType) -> ()) -> NoticeObserver {
-        let observer = NotificationCenter.default.addObserver(forName: name, object: object, queue: queue) { notification in
+        let center = NotificationCenter.default
+        let observer = center.addObserver(forName: name, object: object, queue: queue) { notification in
             notiBlock?(notification)
             guard
                 let userInfo = notification.userInfo,
@@ -33,7 +37,7 @@ public extension NoticeType {
             else { return }
             infoBlock(info)
         }
-        return NoticeObserver(observer: observer)
+        return NoticeObserver(center: center, raw: observer)
     }
     
     static func post(from object: Any? = nil, info: InfoType? = nil) {
@@ -67,54 +71,4 @@ public extension NoticeType where InfoType: NoticeUserInfoDecodable {
 //MARK: - NoticeUserInfoDecodable
 public protocol NoticeUserInfoDecodable {
     init?(info: [AnyHashable : Any])
-}
-
-//MARK: - NoticeObserver
-@available(iOS, deprecated: 10)
-public struct NoticeObserver {
-    private let observer: NSObjectProtocol
-    
-    public init(observer: NSObjectProtocol) {
-        self.observer = observer
-    }
-    
-    @available(*, deprecated: 0.11.0)
-    public func addObserverTo(_ pool: NoticeObserverPool) {
-        pool.adding(observer)
-    }
-    
-    public func disposed(by pool: NoticeObserverPool) {
-        pool.adding(observer)
-    }
-    
-    public func dispose() {
-        NotificationCenter.default.removeObserver(observer)
-    }
-}
-
-//MARK: - NoticeObserverPool
-@available(iOS, deprecated: 10)
-public class NoticeObserverPool {
-    private var observers: [NSObjectProtocol] = []
-    private var mutex: pthread_mutex_t = pthread_mutex_t()
-    
-    public init() {
-        pthread_mutex_init(&mutex, nil)
-    }
-    
-    deinit {
-        pthread_mutex_lock(&mutex)
-        observers.forEach {
-            NotificationCenter.default.removeObserver($0)
-        }
-        observers.removeAll()
-        pthread_mutex_unlock(&mutex)
-        pthread_mutex_destroy(&mutex)
-    }
-    
-    fileprivate func adding(_ observer: NSObjectProtocol) {
-        pthread_mutex_lock(&mutex)
-        observers = Array([observers, [observer]].joined())
-        pthread_mutex_unlock(&mutex)
-    }
 }
