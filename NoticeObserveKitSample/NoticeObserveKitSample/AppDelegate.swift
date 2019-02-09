@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import NoticeObserveKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         if let rootVC = window?.rootViewController as? UINavigationController {
             rootVC.delegate = self
@@ -47,11 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         let content = NavigationControllerContent(viewController: viewController, animated: animated)
-        NavigationControllerDidShow.post(info: content)
+        Notice.Center.default.post(name: .navigationControllerDidShow, with: content)
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         let content = NavigationControllerContent(viewController: viewController, animated: animated)
-        NavigationControllerWillShow.post(info: content)
+        Notice.Center.default.post(name: .navigationControllerWillShow, with: content)
     }
 }

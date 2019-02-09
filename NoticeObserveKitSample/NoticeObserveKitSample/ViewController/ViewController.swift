@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         let selector = #selector(ViewController.didTapCancelButton(_:))
         return UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: selector)
     }()
-    private var pool = NoticeObserverPool()
+
+    private var pool = Notice.ObserverPool()
+
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
     
@@ -36,34 +38,34 @@ class ViewController: UIViewController {
     }
     
     private func configureObservers() {
-        UIKeyboardWillShow.observe { [unowned self] in
+        Notice.Center.default.observe(name: .keyboardWillShow) { [unowned self] in
             self.view.layoutIfNeeded()
             self.textViewBottomConstraint.constant = $0.frame.size.height + Const.textViewMinBottom
             UIView.animate(withDuration: $0.animationDuration, delay: 0, options: $0.animationCurve, animations: {
                 self.view.layoutIfNeeded()
             }, completion: nil)
             self.setText("UIKeyboard will show = \($0)")
-        }.disposed(by: pool)
-        
-        UIKeyboardWillHide.observe { [unowned self] in
+        }.invalidated(by: pool)
+
+        Notice.Center.default.observe(name: .keyboardWillHide) { [unowned self] in
             self.view.layoutIfNeeded()
             self.textViewBottomConstraint.constant = Const.textViewMinBottom
             UIView.animate(withDuration: $0.animationDuration, delay: 0, options: $0.animationCurve, animations: {
                 self.view.layoutIfNeeded()
             }, completion: nil)
             self.setText("UIKeyboard will hide = \($0)")
-        }.disposed(by: pool)
-        
-        NavigationControllerDidShow.observe { [unowned self] in
+        }.invalidated(by: pool)
+
+        Notice.Center.default.observe(name: .navigationControllerDidShow) { [unowned self] in
             self.setText("UINavigationController did show = \($0)")
-        }.disposed(by: pool)
-        
-        NavigationControllerWillShow.observe { [unowned self] in
+        }.invalidated(by: pool)
+
+        Notice.Center.default.observe(name: .navigationControllerWillShow) { [unowned self] in
             if $0.viewController is NextViewController {
                 $0.viewController.title = "Dummy VC"
             }
             self.setText("UINavigationController will show = \($0)")
-        }.disposed(by: pool)
+        }.invalidated(by: pool)
     }
 
     @objc private func didTapCancelButton(_ sender: UIBarButtonItem) {
@@ -71,7 +73,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapDisposeButton(_ sender: UIButton) {
-        pool = NoticeObserverPool()
+        pool = Notice.ObserverPool()
     }
     
     private func setText(_ text: String) {

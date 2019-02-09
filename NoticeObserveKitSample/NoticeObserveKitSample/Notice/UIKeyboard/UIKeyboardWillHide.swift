@@ -10,5 +10,5 @@ import NoticeObserveKit
 
 struct UIKeyboardWillHide: NoticeType {
     typealias InfoType = UIKeyboardInfo
-    static let name: Notification.Name = .UIKeyboardWillHide
+    static let name: Notification.Name = UIResponder.keyboardWillHideNotification
 }

@@ -1,6 +1,6 @@
 {
   "name": "NoticeObserveKit",
-  "version": "0.4.0",
+  "version": "0.10.0",
   "summary": "NoticeObserveKit is type-safe NotificationCenter wrapper that associates notice type with info type.",
   "homepage": "https://github.com/marty-suzuki/NoticeObserveKit",
   "license": {
@@ -12,11 +12,11 @@
   },
   "source": {
     "git": "https://github.com/marty-suzuki/NoticeObserveKit.git",
-    "tag": "0.4.0"
+    "tag": "0.10.0"
   },
   "social_media_url": "https://twitter.com/marty_suzuki",
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "NoticeObserveKit/*.{swift}",
   "frameworks": "UIKit"

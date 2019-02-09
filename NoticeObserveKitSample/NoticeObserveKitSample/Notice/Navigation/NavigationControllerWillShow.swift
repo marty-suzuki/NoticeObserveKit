@@ -12,3 +12,7 @@ struct NavigationControllerWillShow: NoticeType {
     typealias InfoType = NavigationControllerContent
     static var name = Notification.Name("navigationControllerWillShow")
 }
+
+extension Notice.Names {
+    static let navigationControllerWillShow = Notice.Name<NavigationControllerContent>(name: "navigationControllerWillShow")
+}
