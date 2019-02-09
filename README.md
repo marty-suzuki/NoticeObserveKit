@@ -21,8 +21,8 @@ Notice.Center.default.observe(name: .keyboardWillShow) { keyboardInfo in
 
 ## Usage
 
-First of all, you need to implement `InfoType` and `name` with `NoticeType` protocol.
-`InfoType` means value type of element in `userInfo` of `Notification`.
+First of all, you need to implement `Notice.Name<T>` like this.
+`T` is type of value in notification.userInfo.
 
 ```swift
 extension Notice.Names {
@@ -30,7 +30,7 @@ extension Notice.Names {
 }
 ```
 
-If you define custom object as `InfoType`, you need to implement that with `NoticeUserInfoDecodable` protocol. To confirm this protocol, you must implement `init?(info: [AnyHashable : Any])` and `func dictionaryRepresentation() -> [AnyHashable : Any]`.
+If you define custom object, you need to implement that with `NoticeUserInfoDecodable` protocol. To confirm this protocol, you must implement `init?(info: [AnyHashable : Any])` and `func dictionaryRepresentation() -> [AnyHashable : Any]`.
 
 ```swift
 struct UIKeyboardInfo: NoticeUserInfoDecodable {
