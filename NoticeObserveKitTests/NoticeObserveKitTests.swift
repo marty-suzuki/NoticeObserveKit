@@ -115,4 +115,23 @@ class NoticeObserveKitTests: XCTestCase {
 
         XCTAssertEqual(calledCount, 1)
     }
+
+    func testNotificationCenterExtension() {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Int>(name: name)
+        let center = NotificationCenter()
+        let intValue = Int.random(in: Int.min...Int.max)
+
+        var called = false
+        let observer = center.nok.observe(name: noticeName) { receiving in
+            XCTAssertEqual(intValue, receiving)
+            called = true
+        }
+
+        center.nok.post(name: noticeName, with: intValue)
+
+        XCTAssertTrue(called)
+
+        observer.invalidate()
+    }
 }
