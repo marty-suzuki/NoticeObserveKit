@@ -301,7 +301,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NoticeObserveKitSample/Pods-NoticeObserveKitSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NoticeObserveKitSample/Pods-NoticeObserveKitSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NoticeObserveKit/NoticeObserveKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -310,7 +310,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NoticeObserveKitSample/Pods-NoticeObserveKitSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoticeObserveKitSample/Pods-NoticeObserveKitSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

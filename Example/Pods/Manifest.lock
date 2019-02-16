@@ -1,5 +1,5 @@
 PODS:
-  - NoticeObserveKit (0.10.0)
+  - NoticeObserveKit (0.11.0)
 
 DEPENDENCIES:
   - NoticeObserveKit (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NoticeObserveKit: 2a2924452ffae92d0f0ad4f385ee14be328e7f3e
+  NoticeObserveKit: e40d58fb0ec5953416b98ab8fdb5ee3382130ea4
 
 PODFILE CHECKSUM: dfc22d33353e73a20c66a6f310ab9f90fe1138a6
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:NoticeObserveKit.playground">
+   </FileRef>
+   <FileRef
       location = "group:NoticeObserveKitSample.xcodeproj">
    </FileRef>
    <FileRef
