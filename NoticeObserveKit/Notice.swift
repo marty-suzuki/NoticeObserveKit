@@ -20,6 +20,10 @@ public enum Notice {
         init(center: NotificationCenter) {
             self.center = center
         }
+
+        public convenience init() {
+            self.init(center: .init())
+        }
     }
 
     public class Names {

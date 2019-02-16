@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NoticeObserveKit'
-  s.version          = '0.10.1'
-  s.summary          = 'NoticeObserveKit is type-safe NotificationCenter wrapper that associates notice type with info type.'
+  s.version          = '0.11.0'
+  s.summary          = 'NoticeObserveKit is type-safe NotificationCenter wrapper.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,6 +29,9 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/marty_suzuki'
 
   s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.10'
+  s.tvos.deployment_target = '10.0'
+  s.watchos.deployment_target = '3.0'
 
   s.source_files = 'NoticeObserveKit/*.{swift}'
 
@@ -37,6 +40,6 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
+  s.frameworks = 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

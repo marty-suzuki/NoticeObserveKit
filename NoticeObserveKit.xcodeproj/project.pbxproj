@@ -1,0 +1,837 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9DA77C7F2217BD2100E32ED2 /* NoticeObserveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA77C752217BD2100E32ED2 /* NoticeObserveKit.framework */; };
+		9DA77C842217BD2100E32ED2 /* NoticeObserveKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA77C832217BD2100E32ED2 /* NoticeObserveKitTests.swift */; };
+		9DA77C862217BD2100E32ED2 /* NoticeObserveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DA77C912217BD5300E32ED2 /* NoticeObserveKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA77C8F2217BD5300E32ED2 /* NoticeObserveKit.swift */; };
+		9DA77C922217BD5300E32ED2 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA77C902217BD5300E32ED2 /* Notice.swift */; };
+		ED5025B72217EA8100FE6FEA /* NoticeObserveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED5025D22217EB5500FE6FEA /* NoticeObserveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED5025D32217EB5600FE6FEA /* NoticeObserveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DA77C802217BD2100E32ED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DA77C6C2217BD2100E32ED2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DA77C742217BD2100E32ED2;
+			remoteInfo = NoticeObserveKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9DA77C752217BD2100E32ED2 /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeObserveKit.h; sourceTree = "<group>"; };
+		9DA77C792217BD2100E32ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA77C7E2217BD2100E32ED2 /* NoticeObserveKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoticeObserveKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DA77C832217BD2100E32ED2 /* NoticeObserveKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeObserveKitTests.swift; sourceTree = "<group>"; };
+		9DA77C852217BD2100E32ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA77C8F2217BD5300E32ED2 /* NoticeObserveKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeObserveKit.swift; sourceTree = "<group>"; };
+		9DA77C902217BD5300E32ED2 /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		ED5025AF2217E98900FE6FEA /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5025BD2217EAD400FE6FEA /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5025CA2217EAE600FE6FEA /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DA77C722217BD2100E32ED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DA77C7B2217BD2100E32ED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA77C7F2217BD2100E32ED2 /* NoticeObserveKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025AC2217E98900FE6FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025BA2217EAD400FE6FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025C72217EAE600FE6FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9DA77C6B2217BD2100E32ED2 = {
+			isa = PBXGroup;
+			children = (
+				9DA77C772217BD2100E32ED2 /* NoticeObserveKit */,
+				9DA77C822217BD2100E32ED2 /* NoticeObserveKitTests */,
+				9DA77C762217BD2100E32ED2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9DA77C762217BD2100E32ED2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DA77C752217BD2100E32ED2 /* NoticeObserveKit.framework */,
+				9DA77C7E2217BD2100E32ED2 /* NoticeObserveKitTests.xctest */,
+				ED5025AF2217E98900FE6FEA /* NoticeObserveKit.framework */,
+				ED5025BD2217EAD400FE6FEA /* NoticeObserveKit.framework */,
+				ED5025CA2217EAE600FE6FEA /* NoticeObserveKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DA77C772217BD2100E32ED2 /* NoticeObserveKit */ = {
+			isa = PBXGroup;
+			children = (
+				9DA77C902217BD5300E32ED2 /* Notice.swift */,
+				9DA77C8F2217BD5300E32ED2 /* NoticeObserveKit.swift */,
+				9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */,
+				9DA77C792217BD2100E32ED2 /* Info.plist */,
+			);
+			path = NoticeObserveKit;
+			sourceTree = "<group>";
+		};
+		9DA77C822217BD2100E32ED2 /* NoticeObserveKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DA77C832217BD2100E32ED2 /* NoticeObserveKitTests.swift */,
+				9DA77C852217BD2100E32ED2 /* Info.plist */,
+			);
+			path = NoticeObserveKitTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9DA77C702217BD2100E32ED2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA77C862217BD2100E32ED2 /* NoticeObserveKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025AA2217E98900FE6FEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5025B72217EA8100FE6FEA /* NoticeObserveKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025B82217EAD400FE6FEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5025D22217EB5500FE6FEA /* NoticeObserveKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025C52217EAE600FE6FEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5025D32217EB5600FE6FEA /* NoticeObserveKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9DA77C742217BD2100E32ED2 /* NoticeObserveKit_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DA77C892217BD2100E32ED2 /* Build configuration list for PBXNativeTarget "NoticeObserveKit_iOS" */;
+			buildPhases = (
+				9DA77C702217BD2100E32ED2 /* Headers */,
+				9DA77C712217BD2100E32ED2 /* Sources */,
+				9DA77C722217BD2100E32ED2 /* Frameworks */,
+				9DA77C732217BD2100E32ED2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoticeObserveKit_iOS;
+			productName = NoticeObserveKit;
+			productReference = 9DA77C752217BD2100E32ED2 /* NoticeObserveKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9DA77C7D2217BD2100E32ED2 /* NoticeObserveKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DA77C8C2217BD2100E32ED2 /* Build configuration list for PBXNativeTarget "NoticeObserveKitTests" */;
+			buildPhases = (
+				9DA77C7A2217BD2100E32ED2 /* Sources */,
+				9DA77C7B2217BD2100E32ED2 /* Frameworks */,
+				9DA77C7C2217BD2100E32ED2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DA77C812217BD2100E32ED2 /* PBXTargetDependency */,
+			);
+			name = NoticeObserveKitTests;
+			productName = NoticeObserveKitTests;
+			productReference = 9DA77C7E2217BD2100E32ED2 /* NoticeObserveKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED5025AE2217E98900FE6FEA /* NoticeObserveKit_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED5025B42217E98900FE6FEA /* Build configuration list for PBXNativeTarget "NoticeObserveKit_watchOS" */;
+			buildPhases = (
+				ED5025AA2217E98900FE6FEA /* Headers */,
+				ED5025AB2217E98900FE6FEA /* Sources */,
+				ED5025AC2217E98900FE6FEA /* Frameworks */,
+				ED5025AD2217E98900FE6FEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoticeObserveKit_watchOS;
+			productName = NoticeObserveKit_watchOS;
+			productReference = ED5025AF2217E98900FE6FEA /* NoticeObserveKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED5025BC2217EAD400FE6FEA /* NoticeObserveKit_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED5025C22217EAD400FE6FEA /* Build configuration list for PBXNativeTarget "NoticeObserveKit_tvOS" */;
+			buildPhases = (
+				ED5025B82217EAD400FE6FEA /* Headers */,
+				ED5025B92217EAD400FE6FEA /* Sources */,
+				ED5025BA2217EAD400FE6FEA /* Frameworks */,
+				ED5025BB2217EAD400FE6FEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoticeObserveKit_tvOS;
+			productName = NoticeObserveKit_tvOS;
+			productReference = ED5025BD2217EAD400FE6FEA /* NoticeObserveKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED5025C92217EAE600FE6FEA /* NoticeObserveKit_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED5025CF2217EAE700FE6FEA /* Build configuration list for PBXNativeTarget "NoticeObserveKit_macOS" */;
+			buildPhases = (
+				ED5025C52217EAE600FE6FEA /* Headers */,
+				ED5025C62217EAE600FE6FEA /* Sources */,
+				ED5025C72217EAE600FE6FEA /* Frameworks */,
+				ED5025C82217EAE600FE6FEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoticeObserveKit_macOS;
+			productName = NoticeObserveKit_macOS;
+			productReference = ED5025CA2217EAE600FE6FEA /* NoticeObserveKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DA77C6C2217BD2100E32ED2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "marty-suzuki";
+				TargetAttributes = {
+					9DA77C742217BD2100E32ED2 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					9DA77C7D2217BD2100E32ED2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					ED5025AE2217E98900FE6FEA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					ED5025BC2217EAD400FE6FEA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					ED5025C92217EAE600FE6FEA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 9DA77C6F2217BD2100E32ED2 /* Build configuration list for PBXProject "NoticeObserveKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9DA77C6B2217BD2100E32ED2;
+			productRefGroup = 9DA77C762217BD2100E32ED2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DA77C742217BD2100E32ED2 /* NoticeObserveKit_iOS */,
+				9DA77C7D2217BD2100E32ED2 /* NoticeObserveKitTests */,
+				ED5025AE2217E98900FE6FEA /* NoticeObserveKit_watchOS */,
+				ED5025BC2217EAD400FE6FEA /* NoticeObserveKit_tvOS */,
+				ED5025C92217EAE600FE6FEA /* NoticeObserveKit_macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DA77C732217BD2100E32ED2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DA77C7C2217BD2100E32ED2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025AD2217E98900FE6FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025BB2217EAD400FE6FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025C82217EAE600FE6FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DA77C712217BD2100E32ED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA77C912217BD5300E32ED2 /* NoticeObserveKit.swift in Sources */,
+				9DA77C922217BD5300E32ED2 /* Notice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DA77C7A2217BD2100E32ED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA77C842217BD2100E32ED2 /* NoticeObserveKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025AB2217E98900FE6FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025B92217EAD400FE6FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5025C62217EAE600FE6FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DA77C812217BD2100E32ED2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DA77C742217BD2100E32ED2 /* NoticeObserveKit_iOS */;
+			targetProxy = 9DA77C802217BD2100E32ED2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9DA77C872217BD2100E32ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9DA77C882217BD2100E32ED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9DA77C8A2217BD2100E32ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit";
+				PRODUCT_NAME = NoticeObserveKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DA77C8B2217BD2100E32ED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit";
+				PRODUCT_NAME = NoticeObserveKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9DA77C8D2217BD2100E32ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NoticeObserveKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DA77C8E2217BD2100E32ED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NoticeObserveKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ED5025B52217E98900FE6FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit-watchOS";
+				PRODUCT_NAME = NoticeObserveKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		ED5025B62217E98900FE6FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit-watchOS";
+				PRODUCT_NAME = NoticeObserveKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		ED5025C32217EAD400FE6FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit-tvOS";
+				PRODUCT_NAME = NoticeObserveKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		ED5025C42217EAD400FE6FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit-tvOS";
+				PRODUCT_NAME = NoticeObserveKit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		ED5025D02217EAE700FE6FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit-macOS";
+				PRODUCT_NAME = NoticeObserveKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		ED5025D12217EAE700FE6FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = NoticeObserveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKit-macOS";
+				PRODUCT_NAME = NoticeObserveKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DA77C6F2217BD2100E32ED2 /* Build configuration list for PBXProject "NoticeObserveKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DA77C872217BD2100E32ED2 /* Debug */,
+				9DA77C882217BD2100E32ED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DA77C892217BD2100E32ED2 /* Build configuration list for PBXNativeTarget "NoticeObserveKit_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DA77C8A2217BD2100E32ED2 /* Debug */,
+				9DA77C8B2217BD2100E32ED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DA77C8C2217BD2100E32ED2 /* Build configuration list for PBXNativeTarget "NoticeObserveKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DA77C8D2217BD2100E32ED2 /* Debug */,
+				9DA77C8E2217BD2100E32ED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED5025B42217E98900FE6FEA /* Build configuration list for PBXNativeTarget "NoticeObserveKit_watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED5025B52217E98900FE6FEA /* Debug */,
+				ED5025B62217E98900FE6FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED5025C22217EAD400FE6FEA /* Build configuration list for PBXNativeTarget "NoticeObserveKit_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED5025C32217EAD400FE6FEA /* Debug */,
+				ED5025C42217EAD400FE6FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED5025CF2217EAE700FE6FEA /* Build configuration list for PBXNativeTarget "NoticeObserveKit_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED5025D02217EAE700FE6FEA /* Debug */,
+				ED5025D12217EAE700FE6FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DA77C6C2217BD2100E32ED2 /* Project object */;
+}
