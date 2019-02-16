@@ -11,24 +11,108 @@ import XCTest
 
 class NoticeObserveKitTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testSingleCenter() {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Int>(name: name)
+        let center = Notice.Center()
+        let intValue = Int.random(in: Int.min...Int.max)
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        var called = false
+        let observer = center.observe(name: noticeName) { receiving in
+            XCTAssertEqual(intValue, receiving)
+            called = true
         }
+
+        center.post(name: noticeName, with: intValue)
+
+        XCTAssertTrue(called)
+
+        observer.invalidate()
     }
 
+    func testMultipleCenter() {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Int>(name: name)
+
+        let center1 = Notice.Center()
+        let center2 = Notice.Center()
+        let intValue = Int.random(in: Int.min...Int.max)
+
+        var called1 = false
+        let observer1 = center1.observe(name: noticeName) { receiving in
+            XCTAssertEqual(intValue, receiving)
+            called1 = true
+        }
+
+        var called2 = false
+        let observer2 = center2.observe(name: noticeName) { receiving in
+            called2 = true
+        }
+
+        center1.post(name: noticeName, with: intValue)
+
+        XCTAssertTrue(called1)
+        XCTAssertFalse(called2)
+
+        observer1.invalidate()
+        observer2.invalidate()
+    }
+
+    func testSingleCenterAndMultipleName() {
+        let noticeName1 = Notice.Name<Int>(name: "test-notification1")
+        let noticeName2 = Notice.Name<Int>(name: "test-notification2")
+
+        let center = Notice.Center()
+        let intValue = Int.random(in: Int.min...Int.max)
+
+        var calledCount: Int = 0
+        let observer = center.observe(name: noticeName1) { receiving in
+            XCTAssertEqual(intValue, receiving)
+            calledCount += 1
+        }
+
+        center.post(name: noticeName1, with: intValue)
+        center.post(name: noticeName2, with: intValue)
+
+        XCTAssertEqual(calledCount, 1)
+
+        observer.invalidate()
+    }
+
+    func testInvalidate() {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Int>(name: name)
+        let center = Notice.Center()
+        let intValue = Int.random(in: Int.min...Int.max)
+
+        var calledCount: Int = 0
+        let observer = center.observe(name: noticeName) { _ in
+            calledCount += 1
+        }
+
+        center.post(name: noticeName, with: intValue)
+        observer.invalidate()
+        center.post(name: noticeName, with: intValue)
+
+        XCTAssertEqual(calledCount, 1)
+    }
+
+    func testInvalidatedByObserverPool() {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Int>(name: name)
+        let center = Notice.Center()
+        let intValue = Int.random(in: Int.min...Int.max)
+
+        var pool = Notice.ObserverPool()
+        var calledCount: Int = 0
+        center.observe(name: noticeName) { _ in
+            calledCount += 1
+        }.invalidated(by: pool)
+
+        center.post(name: noticeName, with: intValue)
+        pool = Notice.ObserverPool()
+        center.post(name: noticeName, with: intValue)
+
+        XCTAssertEqual(calledCount, 1)
+    }
 }
