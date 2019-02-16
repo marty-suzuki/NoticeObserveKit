@@ -121,6 +121,9 @@ class ViewController: UIViewController {
 - Swift 4.2
 - Xcode 10.1 or greater
 - iOS 10.0 or greater
+- tvOS 10.0 or greater
+- macOS 10.10 or greater
+- watchOS 3.0 or greater
 
 ## Installation
 
