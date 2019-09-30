@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     private func setText(_ text: String) {
         let newText = (textView.text ?? "") + text + "\n\n"
         textView.text = newText
-        textView.scrollRangeToVisible(NSRange(location: newText.characters.count, length: 0))
+        textView.scrollRangeToVisible(NSRange(location: newText.count, length: 0))
     }
     
     override func didReceiveMemoryWarning() {
