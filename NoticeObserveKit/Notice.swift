@@ -16,6 +16,10 @@ public enum Notice {
 
     public final class Center {
 
+        @available(iOS, deprecated: 10, renamed: "NotificationCenter.default.nok")
+        @available(watchOS, deprecated: 3, renamed: "NotificationCenter.default.nok")
+        @available(tvOS, deprecated: 10, renamed: "NotificationCenter.default.nok")
+        @available(OSX, deprecated: 10.10, renamed: "NotificationCenter.default.nok")
         public static let `default` = Center(center: .default)
 
         let center: NotificationCenter
@@ -59,6 +63,10 @@ public enum Notice {
         }
     }
 
+    @available(iOS, deprecated: 10)
+    @available(watchOS, deprecated: 3)
+    @available(tvOS, deprecated: 10)
+    @available(OSX, deprecated: 10.10)
     public final class Observer {
 
         private(set) weak var center: NotificationCenter?
@@ -70,6 +78,10 @@ public enum Notice {
         }
     }
 
+    @available(iOS, deprecated: 10)
+    @available(watchOS, deprecated: 3)
+    @available(tvOS, deprecated: 10)
+    @available(OSX, deprecated: 10.10)
     public class ObserverPool {
         private(set) var observers: [Observer] = []
         private(set) var mutex: pthread_mutex_t = pthread_mutex_t()
@@ -125,6 +137,10 @@ extension Notice.Center {
         center.post(name: name.raw, object: object, userInfo: nil)
     }
 
+    @available(iOS, deprecated: 10)
+    @available(watchOS, deprecated: 3)
+    @available(tvOS, deprecated: 10)
+    @available(OSX, deprecated: 10.10)
     public func observe<Value>(name: Notice.Name<Value>,
                                object: Any? = nil,
                                queue: OperationQueue? = nil,
@@ -143,6 +159,10 @@ extension Notice.Center {
         return Notice.Observer(center: center, raw: observer)
     }
 
+    @available(iOS, deprecated: 10)
+    @available(watchOS, deprecated: 3)
+    @available(tvOS, deprecated: 10)
+    @available(OSX, deprecated: 10.10)
     public func observe(
         name: Notice.Name<Void>,
         object: Any? = nil,
@@ -225,6 +245,10 @@ extension Notice.Center {
 
 // MARK: - Notice.Observer
 
+@available(iOS, deprecated: 10)
+@available(watchOS, deprecated: 3)
+@available(tvOS, deprecated: 10)
+@available(OSX, deprecated: 10.10)
 extension Notice.Observer {
     public func invalidate() {
         center?.removeObserver(raw)
@@ -258,6 +282,10 @@ extension Notice.Extension {
         base.post(name: name, from: object)
     }
 
+    @available(iOS, deprecated: 10)
+    @available(watchOS, deprecated: 3)
+    @available(tvOS, deprecated: 10)
+    @available(OSX, deprecated: 10.10)
     public func observe<Value>(name: Notice.Name<Value>,
                                object: Any? = nil,
                                queue: OperationQueue? = nil,
@@ -267,6 +295,10 @@ extension Notice.Extension {
                             queue: queue, using: using)
     }
 
+    @available(iOS, deprecated: 10)
+    @available(watchOS, deprecated: 3)
+    @available(tvOS, deprecated: 10)
+    @available(OSX, deprecated: 10.10)
     public func observe(
         name: Notice.Name<Void>,
         object: Any? = nil,

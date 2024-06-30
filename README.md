@@ -7,19 +7,20 @@
 
 NoticeObserveKit is type-safe NotificationCenter wrapper.
 
+Swift Concurrency (since macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0)
+
 ```swift
-// .keyboardWillShow is a static property.
-NotificationCenter.default.nok.observe(name: .keyboardWillShow) { keyboardInfo in
-    // In this case, keyboardInfo is UIKeyboardInfo type.
-    // It is inferred from a generic parameter of Notice.Name<Value>.
-    print(keyboardInfo)
+Task {
+    // .keyboardWillShow is a static property.
+    for try await keyboardInfo in NotificationCenter.default.nok.notifications(named: .keyboardWillShow) { 
+        // In this case, keyboardInfo is UIKeyboardInfo type.
+        // It is inferred from a generic parameter of Notice.Name<Value>.
+        print(keyboardInfo)
+    }
 }
-// pool is Notice.ObserverPool.
-// If pool is released, Notice.Observes are automatically removed.
-.invalidated(by: pool)
 ```
 
-Combine
+Combine (since macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0)
 
 ```swift
 // .keyboardWillShow is a static property.
@@ -35,17 +36,18 @@ NotificationCenter.default.nok.publisher(for: .keyboardWillShow)
     .store(in: &cancellables)
 ```
 
-Swift Concurrency
+NoticeObserveKit original
 
 ```swift
-Task {
-    // .keyboardWillShow is a static property.
-    for try await keyboardInfo in NotificationCenter.default.nok.notifications(named: .keyboardWillShow) { 
-        // In this case, keyboardInfo is UIKeyboardInfo type.
-        // It is inferred from a generic parameter of Notice.Name<Value>.
-        print(keyboardInfo)
-    }
+// .keyboardWillShow is a static property.
+NotificationCenter.default.nok.observe(name: .keyboardWillShow) { keyboardInfo in
+    // In this case, keyboardInfo is UIKeyboardInfo type.
+    // It is inferred from a generic parameter of Notice.Name<Value>.
+    print(keyboardInfo)
 }
+// pool is Notice.ObserverPool.
+// If pool is released, Notice.Observes are automatically removed.
+.invalidated(by: pool)
 ```
 
 ## Usage
@@ -58,10 +60,11 @@ extension Notice.Names {
     static let keyboardWillShow = Notice.Name<UIKeyboardInfo>(
         UIResponder.keyboardWillShowNotification
     ) { userInfo in
+        // Implementing decode is only required if you want to use an already defined Notification.Name (e.g. UIResponder.keyboardWillShowNotification).
         guard
-            let frame = (info[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
-            let duration = info[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval,
-            let curve = info[UIKeyboardAnimationCurveUserInfoKey] as? UInt
+            let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+            let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval,
+            let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? UInt
         else {
             throw DecodeError()
         }
@@ -81,6 +84,7 @@ If you can post custom Notification like this.
 
 ```swift
 extension Notice.Names {
+    // If you define your own custom Notification.Name, no implementation of decode is required.
     static let navigationControllerDidShow = Notice.Name<NavigationControllerContent>(name: "navigationControllerDidShow")
 }
 
