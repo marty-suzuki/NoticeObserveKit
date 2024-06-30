@@ -6,6 +6,9 @@
 //  Copyright © 2019 marty-suzuki. All rights reserved.
 //
 
+#if canImport(Combine)
+import Combine
+#endif
 import XCTest
 @testable import NoticeObserveKit
 
@@ -134,4 +137,49 @@ class NoticeObserveKitTests: XCTestCase {
 
         observer.invalidate()
     }
+
+#if canImport(Combine)
+    @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    func testPublisherForValue() {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Int>(name: name)
+        let center = NotificationCenter()
+        let intValue = Int.random(in: Int.min...Int.max)
+
+        var called = false
+        let cancellable = center.nok.publisher(for: noticeName)
+            .sink(
+                receiveCompletion: { _ in },
+                receiveValue: { receiving in
+                    XCTAssertEqual(intValue, receiving)
+                    called = true
+                }
+            )
+
+        center.nok.post(name: noticeName, with: intValue)
+
+        XCTAssertTrue(called)
+
+        cancellable.cancel()
+    }
+
+    @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    func testPublisherForVoid() {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Void>(name: name)
+        let center = NotificationCenter()
+
+        var called = false
+        let cancellable = center.nok.publisher(for: noticeName)
+            .sink {
+                called = true
+            }
+
+        center.nok.post(name: noticeName)
+
+        XCTAssertTrue(called)
+
+        cancellable.cancel()
+    }
+#endif
 }

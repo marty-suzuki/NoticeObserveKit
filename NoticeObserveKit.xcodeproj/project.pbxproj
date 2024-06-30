@@ -10,7 +10,6 @@
 		9DA77C7F2217BD2100E32ED2 /* NoticeObserveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA77C752217BD2100E32ED2 /* NoticeObserveKit.framework */; };
 		9DA77C842217BD2100E32ED2 /* NoticeObserveKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA77C832217BD2100E32ED2 /* NoticeObserveKitTests.swift */; };
 		9DA77C862217BD2100E32ED2 /* NoticeObserveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DA77C912217BD5300E32ED2 /* NoticeObserveKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA77C8F2217BD5300E32ED2 /* NoticeObserveKit.swift */; };
 		9DA77C922217BD5300E32ED2 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA77C902217BD5300E32ED2 /* Notice.swift */; };
 		ED5025B72217EA8100FE6FEA /* NoticeObserveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED5025D22217EB5500FE6FEA /* NoticeObserveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,7 +33,6 @@
 		9DA77C7E2217BD2100E32ED2 /* NoticeObserveKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoticeObserveKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA77C832217BD2100E32ED2 /* NoticeObserveKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeObserveKitTests.swift; sourceTree = "<group>"; };
 		9DA77C852217BD2100E32ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DA77C8F2217BD5300E32ED2 /* NoticeObserveKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeObserveKit.swift; sourceTree = "<group>"; };
 		9DA77C902217BD5300E32ED2 /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		ED5025AF2217E98900FE6FEA /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5025BD2217EAD400FE6FEA /* NoticeObserveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NoticeObserveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				9DA77C902217BD5300E32ED2 /* Notice.swift */,
-				9DA77C8F2217BD5300E32ED2 /* NoticeObserveKit.swift */,
 				9DA77C782217BD2100E32ED2 /* NoticeObserveKit.h */,
 				9DA77C792217BD2100E32ED2 /* Info.plist */,
 			);
@@ -342,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA77C912217BD5300E32ED2 /* NoticeObserveKit.swift in Sources */,
 				9DA77C922217BD5300E32ED2 /* Notice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
