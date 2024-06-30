@@ -205,6 +205,22 @@ extension Notice.Center {
             .eraseToAnyPublisher()
     }
 #endif
+
+    @available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)
+    public func notifications<Value>(
+        named name: Notice.Name<Value>,
+        object: AnyObject? = nil
+    ) -> AsyncThrowingPublisher<AnyPublisher<Value, Notice.InvalidUserInfError>> {
+        AsyncThrowingPublisher(publisher(for: name, object: object))
+    }
+
+    @available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)
+    public func notifications(
+        named name: Notice.Name<Void>,
+        object: AnyObject? = nil
+    ) -> AsyncPublisher<AnyPublisher<Void, Never>> {
+        AsyncPublisher(publisher(for: name, object: object))
+    }
 }
 
 // MARK: - Notice.Observer
@@ -278,4 +294,20 @@ extension Notice.Extension {
         base.publisher(for: name, object: object)
     }
 #endif
+
+    @available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)
+    public func notifications<Value>(
+        named name: Notice.Name<Value>,
+        object: AnyObject? = nil
+    ) -> AsyncThrowingPublisher<AnyPublisher<Value, Notice.InvalidUserInfError>> {
+        base.notifications(named: name, object: object)
+    }
+
+    @available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)
+    public func notifications(
+        named name: Notice.Name<Void>,
+        object: AnyObject? = nil
+    ) -> AsyncPublisher<AnyPublisher<Void, Never>> {
+        base.notifications(named: name, object: object)
+    }
 }

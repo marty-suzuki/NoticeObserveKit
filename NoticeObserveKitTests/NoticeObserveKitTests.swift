@@ -182,4 +182,37 @@ class NoticeObserveKitTests: XCTestCase {
         cancellable.cancel()
     }
 #endif
+
+    @available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)
+    func testSwiftConcurrencyForValue() async throws {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Int>(name: name)
+        let center = NotificationCenter()
+        let intValue = Int.random(in: Int.min...Int.max)
+
+        var iterator = center.nok.notifications(named: noticeName).makeAsyncIterator()
+
+        Task.detached(priority: .low) {
+            center.nok.post(name: noticeName, with: intValue)
+        }
+
+        let receiving = try await iterator.next()
+        XCTAssertEqual(intValue, receiving)
+    }
+
+    @available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)
+    func testSwiftConcurrencyForVoid() async {
+        let name = "test-notification"
+        let noticeName = Notice.Name<Void>(name: name)
+        let center = NotificationCenter()
+
+        var iterator = center.nok.notifications(named: noticeName).makeAsyncIterator()
+
+        Task.detached(priority: .low) {
+            center.nok.post(name: noticeName)
+        }
+
+        let value: Void? = await iterator.next()
+        XCTAssertNotNil(value)
+    }
 }
