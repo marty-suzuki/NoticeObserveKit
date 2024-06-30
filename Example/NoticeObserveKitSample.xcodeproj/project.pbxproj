@@ -16,8 +16,6 @@
 		ED94F2591E12127400E36EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED94F2571E12127400E36EDE /* LaunchScreen.storyboard */; };
 		ED94F2641E12127400E36EDE /* NoticeObserveKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94F2631E12127400E36EDE /* NoticeObserveKitSampleTests.swift */; };
 		EDF64E251E1348EF0099C226 /* UIKeyboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF64E221E1348EF0099C226 /* UIKeyboardInfo.swift */; };
-		EDF64E261E1348EF0099C226 /* UIKeyboardWillHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF64E231E1348EF0099C226 /* UIKeyboardWillHide.swift */; };
-		EDF64E271E1348EF0099C226 /* UIKeyboardWillShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF64E241E1348EF0099C226 /* UIKeyboardWillShow.swift */; };
 		EDF64E2A1E13491B0099C226 /* NavigationControllerWillShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF64E291E13491A0099C226 /* NavigationControllerWillShow.swift */; };
 		EDF64E2C1E1349440099C226 /* NavigationControllerDidShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF64E2B1E1349440099C226 /* NavigationControllerDidShow.swift */; };
 		EDF64E2E1E1349620099C226 /* NavigationControllerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF64E2D1E1349620099C226 /* NavigationControllerContent.swift */; };
@@ -50,8 +48,6 @@
 		ED94F2651E12127400E36EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDEC8CB7782DC1A1DF3D32E4 /* Pods_NoticeObserveKitSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoticeObserveKitSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF64E221E1348EF0099C226 /* UIKeyboardInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKeyboardInfo.swift; sourceTree = "<group>"; };
-		EDF64E231E1348EF0099C226 /* UIKeyboardWillHide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKeyboardWillHide.swift; sourceTree = "<group>"; };
-		EDF64E241E1348EF0099C226 /* UIKeyboardWillShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKeyboardWillShow.swift; sourceTree = "<group>"; };
 		EDF64E291E13491A0099C226 /* NavigationControllerWillShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerWillShow.swift; sourceTree = "<group>"; };
 		EDF64E2B1E1349440099C226 /* NavigationControllerDidShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDidShow.swift; sourceTree = "<group>"; };
 		EDF64E2D1E1349620099C226 /* NavigationControllerContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerContent.swift; sourceTree = "<group>"; };
@@ -159,8 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				EDF64E221E1348EF0099C226 /* UIKeyboardInfo.swift */,
-				EDF64E231E1348EF0099C226 /* UIKeyboardWillHide.swift */,
-				EDF64E241E1348EF0099C226 /* UIKeyboardWillShow.swift */,
 			);
 			path = UIKeyboard;
 			sourceTree = "<group>";
@@ -325,11 +319,9 @@
 				EDF64E2E1E1349620099C226 /* NavigationControllerContent.swift in Sources */,
 				EDF64E251E1348EF0099C226 /* UIKeyboardInfo.swift in Sources */,
 				ED5526E51E137C3C0071668D /* ViewController.swift in Sources */,
-				EDF64E271E1348EF0099C226 /* UIKeyboardWillShow.swift in Sources */,
 				ED94F24F1E12127300E36EDE /* AppDelegate.swift in Sources */,
 				EDF64E2A1E13491B0099C226 /* NavigationControllerWillShow.swift in Sources */,
 				ED5526E71E137C590071668D /* NextViewController.swift in Sources */,
-				EDF64E261E1348EF0099C226 /* UIKeyboardWillHide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +481,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NoticeObserveKitSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKitSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,7 +496,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NoticeObserveKitSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.NoticeObserveKitSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";

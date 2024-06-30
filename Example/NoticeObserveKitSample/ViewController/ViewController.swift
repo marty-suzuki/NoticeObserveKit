@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         return UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: selector)
     }()
 
-    private var pool = Notice.ObserverPool()
+    private var tasks: [Task<Void, Error>] = []
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
@@ -38,34 +38,44 @@ class ViewController: UIViewController {
     }
     
     private func configureObservers() {
-        Notice.Center.default.observe(name: .keyboardWillShow) { [unowned self] in
-            self.view.layoutIfNeeded()
-            self.textViewBottomConstraint.constant = $0.frame.size.height + Const.textViewMinBottom
-            UIView.animate(withDuration: $0.animationDuration, delay: 0, options: $0.animationCurve, animations: {
+        let nok = NotificationCenter.default.nok
+
+        tasks.append(Task { [unowned self] in
+            for try await keybordInfo in nok.notifications(named: .keyboardWillShow) {
                 self.view.layoutIfNeeded()
-            }, completion: nil)
-            self.setText("UIKeyboard will show = \($0)")
-        }.invalidated(by: pool)
-
-        Notice.Center.default.observe(name: .keyboardWillHide) { [unowned self] in
-            self.view.layoutIfNeeded()
-            self.textViewBottomConstraint.constant = Const.textViewMinBottom
-            UIView.animate(withDuration: $0.animationDuration, delay: 0, options: $0.animationCurve, animations: {
-                self.view.layoutIfNeeded()
-            }, completion: nil)
-            self.setText("UIKeyboard will hide = \($0)")
-        }.invalidated(by: pool)
-
-        Notice.Center.default.observe(name: .navigationControllerDidShow) { [unowned self] in
-            self.setText("UINavigationController did show = \($0)")
-        }.invalidated(by: pool)
-
-        Notice.Center.default.observe(name: .navigationControllerWillShow) { [unowned self] in
-            if $0.viewController is NextViewController {
-                $0.viewController.title = "Dummy VC"
+                self.textViewBottomConstraint.constant = keybordInfo.frame.size.height + Const.textViewMinBottom
+                UIView.animate(withDuration: keybordInfo.animationDuration, delay: 0, options: keybordInfo.animationCurve, animations: {
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+                self.setText("UIKeyboard will show = \(keybordInfo)")
             }
-            self.setText("UINavigationController will show = \($0)")
-        }.invalidated(by: pool)
+        })
+
+        tasks.append(Task { [unowned self] in
+            for try await keybordInfo in nok.notifications(named: .keyboardWillHide) {
+                self.view.layoutIfNeeded()
+                self.textViewBottomConstraint.constant = Const.textViewMinBottom
+                UIView.animate(withDuration: keybordInfo.animationDuration, delay: 0, options: keybordInfo.animationCurve, animations: {
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+                self.setText("UIKeyboard will hide = \(keybordInfo)")
+            }
+        })
+
+        tasks.append(Task { [unowned self] in
+            for try await value in nok.notifications(named: .navigationControllerDidShow) {
+                self.setText("UINavigationController did show = \(value)")
+            }
+        })
+
+        tasks.append(Task { [unowned self] in
+            for try await value in nok.notifications(named: .navigationControllerWillShow) {
+                if value.viewController is NextViewController {
+                    value.viewController.title = "Dummy VC"
+                }
+                self.setText("UINavigationController will show = \(value)")
+            }
+        })
     }
 
     @objc private func didTapCancelButton(_ sender: UIBarButtonItem) {
@@ -73,7 +83,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapDisposeButton(_ sender: UIButton) {
-        pool = Notice.ObserverPool()
+        tasks.forEach { $0.cancel() }
+        tasks.removeAll()
     }
     
     private func setText(_ text: String) {

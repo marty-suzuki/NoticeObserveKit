@@ -8,11 +8,6 @@
 
 import NoticeObserveKit
 
-struct NavigationControllerDidShow: NoticeType {
-    typealias InfoType = NavigationControllerContent
-    static var name = Notification.Name("navigationControllerDidShow")
-}
-
 extension Notice.Names {
     static let navigationControllerDidShow = Notice.Name<NavigationControllerContent>(name: "navigationControllerDidShow")
 }
