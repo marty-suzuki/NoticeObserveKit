@@ -9,7 +9,7 @@ NoticeObserveKit is type-safe NotificationCenter wrapper.
 
 ```swift
 // .keyboardWillShow is a static property.
-Notice.Center.default.observe(name: .keyboardWillShow) { keyboardInfo in
+NotificationCenter.default.nok.observe(name: .keyboardWillShow) { keyboardInfo in
     // In this case, keyboardInfo is UIKeyboardInfo type.
     // It is inferred from a generic parameter of Notice.Name<Value>.
     print(keyboardInfo)
@@ -19,6 +19,35 @@ Notice.Center.default.observe(name: .keyboardWillShow) { keyboardInfo in
 .invalidated(by: pool)
 ```
 
+Combine
+
+```swift
+// .keyboardWillShow is a static property.
+NotificationCenter.default.nok.publisher(for: .keyboardWillShow)
+    .sink(
+        receiveCompletion: { _ in },
+        receiveValue: { keyboardInfo in
+            // In this case, keyboardInfo is UIKeyboardInfo type.
+            // It is inferred from a generic parameter of Notice.Name<Value>.
+            print(keyboardInfo)
+        }
+    )
+    .store(in: &cancellables)
+```
+
+Swift Concurrency
+
+```swift
+Task {
+    // .keyboardWillShow is a static property.
+    for try await keyboardInfo in NotificationCenter.default.nok.notifications(named: .keyboardWillShow) { 
+        // In this case, keyboardInfo is UIKeyboardInfo type.
+        // It is inferred from a generic parameter of Notice.Name<Value>.
+        print(keyboardInfo)
+    }
+}
+```
+
 ## Usage
 
 First of all, you need to implement `Notice.Name<T>` like this.
@@ -26,34 +55,25 @@ First of all, you need to implement `Notice.Name<T>` like this.
 
 ```swift
 extension Notice.Names {
-    static let keyboardWillShow = Notice.Name<UIKeyboardInfo>(UIResponder.keyboardWillShowNotification)
-}
-```
-
-If you define custom object, you need to implement that with `NoticeUserInfoDecodable` protocol. To confirm this protocol, you must implement `init?(info: [AnyHashable : Any])` and `func dictionaryRepresentation() -> [AnyHashable : Any]`.
-
-```swift
-struct UIKeyboardInfo: NoticeUserInfoDecodable {
-    let frame: CGRect
-    let animationDuration: TimeInterval
-    let animationCurve: UIViewAnimationOptions
-
-    init?(info: [AnyHashable : Any]) {
+    static let keyboardWillShow = Notice.Name<UIKeyboardInfo>(
+        UIResponder.keyboardWillShowNotification
+    ) { userInfo in
         guard
             let frame = (info[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
             let duration = info[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval,
             let curve = info[UIKeyboardAnimationCurveUserInfoKey] as? UInt
         else {
-            return nil
+            throw DecodeError()
         }
-        self.frame = frame
-        self.animationDuration = duration
-        self.animationCurve = UIViewAnimationOptions(rawValue: curve)
+
+        return UIKeyboardInfo(
+            frame: frame,
+            animationDuration: duration,
+            animationCurve: UIViewAnimationOptions(rawValue: curve)
+        )
     }
 }
 ```
-
-Usage for under v0.4.0 is [documents/v0_4_0](./documents/v0_4_0.md).
 
 ## Customization
 
@@ -65,25 +85,16 @@ extension Notice.Names {
 }
 
 let content = NavigationControllerContent(viewController: viewController, animated: animated)
-Notice.Center.default.post(name: .navigationControllerDidShow, value: content)
+NotificationCenter.default.nok.post(name: .navigationControllerDidShow, value: content)
 ```
 
 You can invalidate manually like this.
 
 ```swift
-let observer = Notice.Center.default.observe(name: .keyboardWillShow) { keyboardInfo in
+let observer = NotificationCenter.default.nok.observe(name: .keyboardWillShow) { keyboardInfo in
     print(keyboardInfo)
 }
 observer.invalidate()
-```
-
-You can use vi NotificationCenter.
-
-```swift
-NotificationCenter.default.nok.observe(name: .keyboardWillShow) { keyboardInfo in
-    print(keyboardInfo)
-}
-.invalidated(by: pool)
 ```
 
 ## Sample
@@ -94,7 +105,18 @@ import NoticeObserveKit
 
 class ViewController: UIViewController {
     private let searchBar = UISearchBar(frame: .zero)
-    private var pool = Notice.ObserverPool()
+    private lazy var keyboardNotificationTasks: [Task<Void, Error>] = [
+        Task {
+            for try await value in NotificationCenter.default.nok.notifications(named: .keyboardWillShow) {
+                print("UIKeyboard will show = \(value)")
+            }
+        },
+        Task {
+            for try await value in NotificationCenter.default.nok.notifications(named: .keyboardWillHide) {
+                print("UIKeyboard will hide = \(value)")
+            }
+        }
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,13 +127,7 @@ class ViewController: UIViewController {
     }
 
     private func configureObservers() {
-        Notice.Center.default.observe(name: .keyboardWillShow) {
-            print("UIKeyboard will show = \($0)")
-        }.invalidated(by: pool)
-
-        Notice.Center.default.observe(name: .keyboardWillHide) {
-            print("UIKeyboard will hide = \($0)")
-        }.invalidated(by: pool)
+        _ = keyboardNotificationTasks
     }
 }
 ```
@@ -119,7 +135,7 @@ class ViewController: UIViewController {
 ## Requirements
 
 - Swift 5
-- Xcode 10.2 or greater
+- Xcode 15.0 or greater
 - iOS 10.0 or greater
 - tvOS 10.0 or greater
 - macOS 10.10 or greater
